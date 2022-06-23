@@ -11,7 +11,6 @@ const DateFilter = (props) => {
         <Input
           type="date" 
           onChange={(date) => {
-            console.log(date.target.value);
             props.onSelectDate(date.target.value);
           }}   
         />

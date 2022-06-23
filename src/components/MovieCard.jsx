@@ -45,7 +45,7 @@ const MovieCard = ({movie,movieId}) => {
     <Card className="centered" >      
         <Card.Content href={`DetailedMovie/${movieId}`}>
           <Image floated="right" size="tiny" src={movieImage} />
-          <div class="card-top">
+          <div className="card-top">
             <Card.Header>{movie.title}</Card.Header>
             <Card.Meta> {movie.tagline}</Card.Meta>
           </div>

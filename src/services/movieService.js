@@ -71,7 +71,6 @@ export const filterMoviesAsync = (genre, language, status, budget, rating, runti
           filteredMovies = filteredMovies.filter(movie => {
             let releaseDate = new Date(movie.release_date).getTime();       
             if (filterEndDate && filterStartDate){
-              console.log(filterStartDate,filterEndDate)
               return (releaseDate >= filterStartDate && releaseDate <= filterEndDate);   
             } else if (filterStartDate){
               return (releaseDate >= filterStartDate);  
