@@ -12,6 +12,9 @@ const MovieList = (props) => {
             movie={movie}
             movieId={movie.id}
             key={movie.id}
+            onMovieLiked={props.handleMoviesLiked}
+            superliked={props.liked}
+            superunliked={props.unliked}
         />)}
        </Card.Group>
     );

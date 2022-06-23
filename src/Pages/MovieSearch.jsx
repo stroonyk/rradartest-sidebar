@@ -23,6 +23,8 @@ const MovieSearch = () => {
     const [languages,setLanguages] = useState([]);  
     const [statuses,setStatus] = useState([]);
     const [movies, setMovies] = useState([]);
+    const [liked,setLiked] = useState(new Map());
+    const [unliked,setUnLiked] = useState(new Map());
 
   /*
   * Get our filters from the movieService
@@ -51,13 +53,29 @@ const MovieSearch = () => {
 /*
 * all our change handlers
 */
+  const onMoviesLikedHandler = (id,likedtype,value) => {
+    if (likedtype === 'liked'){
+      if (liked.get(id)){        
+        liked.delete(id)
+      } else {    
+        unliked.delete(id);            
+        setLiked(liked => liked.set(id,true));  
+      }
+    } else {
+      if (unliked.get(id)){        
+        unliked.delete(id)
+      } else {       
+        liked.delete(id);        
+        setUnLiked(unliked => unliked.set(id,true));  
+      }      
+    }    
+  }
   const onNumberMoviesChangeHandler = e => {
     let number = e.currentTarget.value ? e.currentTarget.value : DEFAULT_NUMBER_OF_MOVIES;
     setUINumberOfMovies(e.currentTarget.value);
     setNumberOfMovies(number);
   }
   const clearMoviesEventHandler = () => {
-    console.log('here');
     setUINumberOfMovies('');
     setNumberOfMovies(DEFAULT_NUMBER_OF_MOVIES);
   }
@@ -117,7 +135,7 @@ return (
           onStatusSelected={handleStatusSelected} 
         />
         <Segment className="outer-div" textAlign="center">
-          <MovieList movies={movies}  />
+          <MovieList movies={movies} handleMoviesLiked={onMoviesLikedHandler} liked={liked} unliked={unliked} />
         </Segment>
     </>
 );
