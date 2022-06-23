@@ -1,0 +1,151 @@
+#root{
+    height: 100%;
+  }
+.pro-sidebar
+{
+  width:  320px !important;
+  min-width:  320px !important;
+}
+.pro-sidebar > .pro-sidebar-inner > .pro-sidebar-layout
+{
+  padding-left:10px;
+}
+.App {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  position: relative;  
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  /*background-color: #282c34;*/
+  min-height: 100vh;
+  display: flex;
+  /*flex-direction: column;*/
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+  
+.sidebar-div
+{  
+    padding: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.outer-div
+{
+    background-image: url('./assets/bg4.jpg') !important;
+    background-position: center !important; /* Center the image */
+    background-repeat: no-repeat !important; /* Do not repeat the image */
+    background-size: cover !important;
+    overflow-y: scroll;
+    overflow-x:hidden;
+    width:100%;
+    height:100%;
+    padding: 10px !important;
+    margin:0px !important;
+}
+.card-top
+{
+  min-height:90px;
+}
+.ui.card a
+{
+  color:black !important;
+}
+.card-left
+{
+  width: 100%;
+  float: left;
+  text-align:left;
+
+}
+.card-right
+{
+  text-align:right;
+  padding-left:5px;
+}
+.liked
+{ 
+    background-color:green !important;
+    font-size:1000pt;
+}
+.disliked
+{ 
+    background-color:red !important;
+}
+.date-filter
+{
+    align-items:center;
+}
+.ui.label
+{
+background-color: #dae8f7 !important;
+}
+
+.filter-row
+{
+    height:70px;
+}
+body, .outer-div
+{
+    background-color:#dae8f7 !important;
+}
+
+.filter-button
+{
+    border:1px solid black !important;
+}
+.ui.card, .ui.cards>.card
+{
+    box-shadow:0 1px 3px 0 #007afc, 0 0 0 1px #007afc !important;
+   background-color: #f5f7fa !important;
+}
+.ui.card.centered.detailed-card
+{
+    width : 900px !important;
+}
+.detailed-card .meta, .detailed-card .header
+{
+    text-align : left !important;
+}
+.ui.input input
+{
+  min-width : 270px !important;
+  min-width : 270px !important;
+}
+input 
+{
+    cursor: pointer;
+    border:1px solid #007afc !important;
+}
+input::-webkit-calendar-picker-indicator 
+{
+    cursor: pointer;
+}
+input#filepicker::-webkit-calendar-picker-indicator 
+{
+    cursor: pointer;
+}
